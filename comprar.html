@@ -19,9 +19,10 @@
   <body>
     <!-- HEADER -->
     <header class="header">
-      <a class="logo" href="index.html" aria-label="Fit Flow inicio"
-        ><img src="img/fitflow.png" alt="Fit Flow" /><span>Fit Flow</span></a
-      >
+      <a class="logo" href="index.html" aria-label="Fit Flow inicio">
+        <img src="img/fitflow.png" alt="Fit Flow" />
+        <span>Fit Flow</span>
+      </a>
 
       <input type="checkbox" id="nav-toggle" class="nav-toggle" />
       <label for="nav-toggle" class="burger" aria-label="Abrir menú">
@@ -35,39 +36,40 @@
           <li><a href="clases.html">NUESTRAS CLASES</a></li>
           <li><a href="reserva.html">RESERVA</a></li>
           <li><a href="comprar.html">COMPRAR CLASES</a></li>
-          <li>
-            <a href="login.html" class="nav-user">
-              <span class="user-icon" aria-hidden="true">
-                <svg
-                  viewBox="0 0 24 24"
-                  width="18"
-                  height="18"
-                  fill="none"
-                  stroke="currentColor"
-                  stroke-width="2"
-                >
-                  <circle cx="12" cy="8" r="4"></circle>
-                  <path d="M4 20c1.6-3.5 4.8-5.5 8-5.5s6.4 2 8 5.5"></path>
-                </svg>
-              </span>
-              INICIAR SESIÓN
-            </a>
-          </li>
+          <li><a href="entrenador.html">ENTRENADORES</a></li>
         </ul>
       </nav>
+
+      <div class="nav-login">
+        <a href="login.html" class="nav-user">
+          <span class="user-icon" aria-hidden="true">
+            <svg
+              viewBox="0 0 24 24"
+              width="18"
+              height="18"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+            >
+              <circle cx="12" cy="8" r="4"></circle>
+              <path d="M4 20c1.6-3.5 4.8-5.5 8-5.5s6.4 2 8 5.5"></path>
+            </svg>
+          </span>
+          INICIAR SESIÓN
+        </a>
+      </div>
     </header>
 
-    <section class="page-hero hero-comprar">
+    <section class="page-clases-def">
       <div>
         <h1>PLANES Y PAQUETES</h1>
         <p>Elige el plan que se adapta a tu ritmo de entrenamiento.</p>
-        <button class="btn-outline">Ver beneficios</button>
       </div>
     </section>
 
-    <section class="page-grid">
+    <section class="page-class">
       <div class="page-card">
-        <img src="img/horarios.jpg" alt="Pack mensual" />
+        <img src="img/secundario.jpg" alt="Pack mensual" />
         <h3>Pack Mensual</h3>
         <p>Acceso ilimitado a clases durante 30 días.</p>
         <button class="btn-outline">Comprar</button>
@@ -79,7 +81,7 @@
         <button class="btn-outline">Comprar</button>
       </div>
       <div class="page-card">
-        <img src="img/nutricional.jpg" alt="Pack elite" />
+        <img src="img/fuerza.jpg" alt="Pack elite" />
         <h3>Pack Elite</h3>
         <p>Clases + asesoría nutricional personalizada.</p>
         <button class="btn-outline">Comprar</button>
@@ -87,73 +89,85 @@
     </section>
 
     <!-- FOOTER -->
-    <footer class="footer">
-      <div class="footer-links">
-        <div>
-          <h4>INFO</h4>
-          <a class="social-link instagram" href="#" aria-label="Instagram">
-            <span class="social-icon" aria-hidden="true">
-              <svg
-                viewBox="0 0 24 24"
-                width="18"
-                height="18"
-                fill="none"
-                stroke="currentColor"
-                stroke-width="2"
-              >
-                <rect x="3" y="3" width="18" height="18" rx="5"></rect>
-                <circle cx="12" cy="12" r="4"></circle>
-                <circle cx="17.5" cy="6.5" r="1"></circle>
-              </svg>
-            </span>
-            Instagram
-          </a>
-          <a class="social-link facebook" href="#" aria-label="Facebook">
-            <span class="social-icon" aria-hidden="true">
-              <svg
-                viewBox="0 0 24 24"
-                width="18"
-                height="18"
-                fill="currentColor"
-              >
-                <path
-                  d="M14 8h3V5h-3c-2.2 0-4 1.8-4 4v3H7v3h3v6h3v-6h3l1-3h-4V9c0-.6.4-1 1-1z"
-                ></path>
-              </svg>
-            </span>
-            Facebook
-          </a>
-          <a class="social-link tiktok" href="#" aria-label="TikTok">
-            <span class="social-icon" aria-hidden="true">
-              <svg
-                viewBox="0 0 24 24"
-                width="18"
-                height="18"
-                fill="currentColor"
-              >
-                <path
-                  d="M16 3c.6 2.2 2.4 4 4.6 4.4v3.1c-1.7 0-3.3-.5-4.6-1.5v5.8c0 3.1-2.5 5.7-5.7 5.7S4.6 18 4.6 14.9s2.5-5.7 5.7-5.7c.4 0 .8 0 1.1.1v3.3c-.3-.1-.7-.2-1.1-.2-1.4 0-2.5 1.1-2.5 2.5s1.1 2.5 2.5 2.5 2.5-1.1 2.5-2.5V3h3.2z"
-                ></path>
-              </svg>
-            </span>
-            TikTok
-          </a>
-        </div>
+    <section class="section-redes">
+      
+        <h2>Siguenos</h2>
 
+        <div class="social-icons">
+          <div class="icon-social">
+            <a class="social-link instagram" href="#" aria-label="Instagram">
+              <span class="social-icon" aria-hidden="true">
+                <svg
+                  viewBox="0 0 24 24"
+                  width="54"
+                  height="54"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                >
+                  <rect x="3" y="3" width="18" height="18" rx="5"></rect>
+                  <circle cx="12" cy="12" r="4"></circle>
+                  <circle cx="17.5" cy="6.5" r="1"></circle>
+                </svg>
+              </span>
+            </a>
+          </div>
+          <div class="icon-social">
+            <a class="social-link facebook" href="#" aria-label="Facebook">
+              <span class="social-icon" aria-hidden="true">
+                <svg
+                  viewBox="0 0 24 24"
+                  width="54"
+                  height="54"
+                  fill="currentColor"
+                >
+                  <path
+                    d="M14 8h3V5h-3c-2.2 0-4 1.8-4 4v3H7v3h3v6h3v-6h3l1-3h-4V9c0-.6.4-1 1-1z"
+                  ></path>
+                </svg>
+              </span>
+            </a>
+          </div>
+          <div class="icon-social">
+            <a class="social-link tiktok" href="#" aria-label="TikTok">
+              <span class="social-icon" aria-hidden="true">
+                <svg
+                  viewBox="0 0 24 24"
+                  width="54"
+                  height="54"
+                  fill="currentColor"
+                >
+                  <path
+                    d="M16 3c.6 2.2 2.4 4 4.6 4.4v3.1c-1.7 0-3.3-.5-4.6-1.5v5.8c0 3.1-2.5 5.7-5.7 5.7S4.6 18 4.6 14.9s2.5-5.7 5.7-5.7c.4 0 .8 0 1.1.1v3.3c-.3-.1-.7-.2-1.1-.2-1.4 0-2.5 1.1-2.5 2.5S8.9 17.4 10.3 17.4s2.5-1.1 2.5-2.5V3h3.2z"
+                  ></path>
+                </svg>
+              </span>
+            </a>
+          </div>
+        </div>
+        <p>Suscríbete y accede a beneficios exclusivos para miembros.</p>
+      </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="footer">
+      <div class="footer-data">
         <div class="footer-infobrand">
           <h4>EMPRESA</h4>
-          <p>Preguntas Frecuentes</p>
-          <p>Contacto</p>
-          <p>Recomendaciones</p>
+          <p><a href="#">Preguntas Frecuentes</a></p>
+          <p><a href="#">Contacto</a></p>
+          <p><a href="#">Recomendaciones</a></p>
         </div>
 
         <div>
-          <h4>APP</h4>
+          <h4>Contacto</h4>
+          <p>contacto@fitflow.pe</p>
+          <p>+51 900000000</p>
         </div>
       </div>
 
       <div class="footer-bottom">
-        <p>© 2026 Fit Flow Club</p>
+        <p>© 2026 Fit FLow Club</p>
       </div>
     </footer>
   </body>
