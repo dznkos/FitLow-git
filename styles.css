@@ -10,10 +10,11 @@ html {
 } */
 
 body {
-  font-family: "Caveat", cursive;
+  /* font-family: "Caveat", cursive; */
   /* font-family: "Outfit", sans-serif; */
+  font-family: "Josefin Sans", sans-serif;
   font-optical-sizing: auto;
-  font-weight: 500;
+  font-weight: 700;
   font-style: normal;
   margin: 0;
   padding: 0;
@@ -31,6 +32,7 @@ body {
   background: #000;
   position: relative;
   z-index: 2;
+  border-bottom: 5px solid rgb(255, 192, 2);
 }
 
 .header span {
@@ -86,8 +88,8 @@ body {
 }
 
 .logo img{
-  width: 124px;
-  height: 124px;
+  width: auto;
+  height: 130px;
   box-shadow: 0 20px 40px rgba(0, 0, 0, 0.6);
   background: linear-gradient(to right, #000 0%, transparent 70%);
   border-radius: 12px; /* opcional */
@@ -320,17 +322,19 @@ nav a:hover::after {
 } */
 
 .page-clases-def {
+   padding-top: 30px;
    text-align: center;
   
 }
 
 .page-class {
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
+  display: grid;
+  grid-template-columns: repeat(2, minmax(250px, 1fr)); 
+  gap: 20px;
+  /* Esto centra el grupo de columnas si el contenedor es más ancho */
+  justify-content: center;
   width: 85vw;
   margin: 0 auto;
-  gap: 30px;
   padding: 60px;
 }
 
@@ -339,8 +343,8 @@ nav a:hover::after {
 
 .page-card {
   position: relative;
-  width: 400px;
-  height: 550px;
+  /* width: 400px; */
+  /* height: 550px; */
   overflow: hidden;
   border-radius: 15px;
 }
@@ -368,6 +372,10 @@ nav a:hover::after {
 
 /* Contenido encima */
 .card-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
   position: absolute;
   bottom: 20px;
   left: 20px;
@@ -387,21 +395,47 @@ nav a:hover::after {
 }
 
 .btn-outline {
-  position: relative;
-  right: -30%;
-  font-family: "Caveat", cursive;
+  width: 190px;
+  position: absolute;
+  bottom: 20px;
+  right: 20px;
+  font-family: "Josefin Sans", sans-serif;
   padding: 8px 16px;
-  background: transparent;
-  border: 2px solid white;
-  color: white;
+  background: rgba(245, 188, 10, 1);
+  border-radius: 25px;
+  border: none;
+  color: black;
   cursor: pointer;
-  transition: 0.3s;
+  transition: 0.5s all ease;
   font-size: 1.4rem;
 }
 
 .btn-outline:hover {
+  background: rgb(0, 0, 0);
+  color: rgb(255, 198, 11);
+}
+
+.btn-card {
+  margin-top: 20px;
+  width: 180px;
+  position: relative;
+  /* bottom: 20px; */
+  /* left: 90px; */
+
+  font-family: "Josefin Sans", sans-serif;
+  padding: 8px 16px;
   background: rgba(245, 188, 10, 1);
+  border-radius: 25px;
+  border: none;
   color: black;
+  cursor: pointer;
+  transition: 0.5s all ease;
+  font-size: 1.4rem;
+}
+
+.btn-card:hover {
+  background: rgb(0, 0, 0);
+  color: rgb(255, 198, 11);
 }
 
 /* END CARD */
@@ -493,7 +527,7 @@ nav a:hover::after {
 
 .proximamente {
   position: absolute;
-  font-family: "Caveat", cursive;
+  font-family: "Josefin Sans", sans-serif;
   text-align: center;
   font-size: 126px;
   background: transparent;
@@ -511,6 +545,83 @@ nav a:hover::after {
 
 
 /* END PROXIMAMENTE */
+
+/* ENTREADORES */
+
+.page-entrenador{
+  display: grid;
+  grid-template-columns: repeat(2, minmax(250px, 1fr)); 
+  gap: 10px;
+  width: 85vw;
+  margin: 0 auto;
+  padding: 60px;
+}
+
+.page-card-entrenador {
+  position: relative;
+  /* width: 400px; */
+  height: 640px;
+  overflow: hidden;
+  border-radius: 15px;
+}
+.page-card-entrenador img {
+  width: 100%;
+  height: 100%;
+  object-fit: scale-down;
+  display: block;
+  aspect-ratio: 16 / 9;
+  transition: transform 0.4s ease-in-out;
+}
+
+.page-card-entrenador::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.37);
+}
+
+
+
+/* PAQUETES */
+
+.page-paquetes {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(250px, 1fr)); 
+  gap: 20px;
+  width: 85vw;
+  margin: 0 auto;
+  padding: 60px;
+}
+
+.page-card-pack {
+  position: relative;
+  /* width: 400px; */
+  height: 640px;
+  overflow: hidden;
+  border-radius: 15px;
+}
+
+.page-card-pack img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  aspect-ratio: 16 / 9;
+  transition: transform 0.4s ease-in-out;
+}
+
+.page-card-pack:hover img{
+  transform: scale(1.16);
+}
+
+.page-card-pack::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.37);
+}
+
+/* END PAQUETES */
 
 /* SERVICES */
 
@@ -535,11 +646,12 @@ nav a:hover::after {
 }
 .service button {
   width: auto;
-  font-family: "Caveat", cursive;
+  font-family: "Josefin Sans", sans-serif;
+  font-weight: 300;
   padding: 8px 16px;
   background: transparent;
-  border: 2px solid white;
-  color: white;
+  border: 2px solid rgba(245, 188, 10, 1);
+  color: rgba(245, 188, 10, 1);
   cursor: pointer;
   transition: 0.3s;
   font-size: 1.4rem;
@@ -558,7 +670,9 @@ nav a:hover::after {
   /* justify-content: center; */
   align-items: center;
   color: white;
-  border: 1px solid white;
+  /* border: 3px solid rgba(245, 188, 10, 1); */
+  border-top: 1px solid rgb(255, 192, 2);
+  border-bottom: 2px solid rgb(255, 192, 2);
 }
 
 .social-icons {
