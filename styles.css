@@ -163,6 +163,10 @@ nav ul {
   gap: 8px;
 }
 
+.nav-user:hover {
+
+}
+
 .nav-user .user-icon {
   color: rgba(245, 188, 10, 1);
   display: inline-flex;
@@ -265,66 +269,9 @@ nav a:hover::after {
   border-radius: 12px;
 }
 
-/* INNER PAGES */
-
-/* .page-hero {
-  min-height: 50vh;
-  display: flex;
-  align-items: center;
-  padding: 60px;
-  color: rgba(245, 188, 10, 1);
-  background-size: cover;
-  background-position: center;
-  position: relative;
-}
-
-.page-hero::before {
-  content: "";
-  position: absolute;
-  inset: 0;
-  background: linear-gradient(
-    90deg,
-    rgba(0, 0, 0, 0.75),
-    rgba(0, 0, 0, 0.35)
-  );
-} */
-
-/* .page-hero > div {
-  position: relative;
-  max-width: 520px;
-}
-
-.page-hero h1 {
-  font-size: 46px;
-  line-height: 1.1;
-  margin-bottom: 12px;
-} */
-
-/* .page-hero p {
-  color: #fff;
-  margin-bottom: 20px;
-} */
-
-/* .hero-clases {
-  background-image: url("img/horarios.jpg");
-}
-
-.hero-reserva {
-  background-image: url("img/secundario.jpg");
-}
-
-.hero-comprar {
-  background-image: url("img/fondo-principal.jpg");
-} */
-
-/* .hero-login {
-  background-image: url("img/nutricional.jpg");
-} */
-
 .page-clases-def {
    padding-top: 30px;
-   text-align: center;
-  
+   text-align: center;  
 }
 
 .page-class {
@@ -362,7 +309,7 @@ nav a:hover::after {
   transform: scale(1.16);
 }
 
-/* Capa oscura para que el texto se vea mejor */
+/* Capa oscura */
 .page-card::after {
   content: "";
   position: absolute;
@@ -429,19 +376,20 @@ nav a:hover::after {
   border: none;
   color: black;
   cursor: pointer;
-  transition: 0.5s all ease;
+  transition: 0.4s all ease;
   font-size: 1.4rem;
 }
 
 .btn-card:hover {
   background: rgb(0, 0, 0);
   color: rgb(255, 198, 11);
+  transform: scale(1.05);
+  box-shadow: 0 0 15px rgba(212, 175, 55, 0.6);
 }
 
 /* END CARD */
 
 /* ABOUT */
-
 .about {
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -469,7 +417,6 @@ nav a:hover::after {
 }
 
 /* WELCOME */
-
 .welcome {
   text-align: center;
   padding: 80px 20px;
@@ -514,13 +461,13 @@ nav a:hover::after {
 }
 
 .coming-soon h2 {
-  font-size: 56px;
+  font-size: 32px;
   margin-bottom: 15px;
   letter-spacing: 1px;
 }
 
 .coming-soon p {
-  font-size: 28px;
+  font-size: 20px;
   margin-bottom: 25px;
   opacity: 0.85;
 }
@@ -533,16 +480,13 @@ nav a:hover::after {
   background: transparent;
   color: rgba(245, 188, 10, 1);
   cursor: pointer;
-  
-  left: -80px;
+  left: -27%;
 }
 
 /* .proximamente:hover {
   transform: rotate(360deg);
   transition: 0.7s ease;
 } */
-
-
 
 /* END PROXIMAMENTE */
 
@@ -664,6 +608,7 @@ nav a:hover::after {
 /* SIGUENOS REDES */
 
 .section-redes {
+  margin-top: 85px;
   padding: 30px;
   display: flex;
   flex-direction: column;
@@ -738,9 +683,9 @@ nav a:hover::after {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
-  align-items: center;
+  align-items: start;
   min-width: 350px;
-  margin-bottom: 72px;
+  margin: 55px 0px;
 }
 
 /* .footer-links {
@@ -785,10 +730,10 @@ nav a:hover::after {
   text-align: center;
   font-size: 17px;
   opacity: 0.6;
-  padding-bottom: 10px;
+  padding-top: 30px;
 }
 .footer-infobrand {
-  padding: 10px 0px;
+  padding: 1px 0px;
 }
 
 .footer-infobrand a {
