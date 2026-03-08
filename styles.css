@@ -956,7 +956,6 @@ color:#ff3c2f;
     font-size:14px;
 }
 
-
 @media(max-width:900px){
     .schedule .title{
         font-size:28px;
@@ -966,3 +965,68 @@ color:#ff3c2f;
         font-size:12px;
     }
 } 
+
+/* #reservarBtn {
+  margin-top: 25px;
+  width: 190px;
+  font-family: "Josefin Sans", sans-serif;
+  padding: 8px 16px;
+  background: rgba(245, 188, 10, 1);
+  border-radius: 25px;
+  border: none;
+  color: black;
+  cursor: pointer;
+  transition: 0.5s all ease;
+  font-size: 1.4rem;
+} */
+
+.indicacion {
+  padding-bottom: 15px;
+  opacity:0.6;
+  font-size:11px;
+}
+
+.reserva-box{
+margin-top:40px;
+padding:20px;
+background:#111;
+border-radius:10px;
+color:white;
+max-width:500px;
+}
+
+#lista-clases{
+list-style:none;
+padding:0;
+margin:20px 0;
+}
+
+#lista-clases li{
+display:flex;
+justify-content:space-between;
+align-items:center;
+padding:10px;
+border-bottom:1px solid #333;
+}
+
+.eliminar{
+background:red;
+color:white;
+border:none;
+padding:5px 10px;
+cursor:pointer;
+border-radius:5px;
+}
+
+#reservarBtn{
+font-size: 1.05rem;
+font-family: "Josefin Sans", sans-serif;
+width:100%;
+padding:15px;
+background:#25D366;
+border:none;
+color:rgb(0, 0, 0);
+font-weight:bold;
+cursor:pointer;
+border-radius:8px;
+}

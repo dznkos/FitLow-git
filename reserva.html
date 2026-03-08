@@ -85,27 +85,27 @@
 
           <tr>
           <td class="time">6:00 - 7:00  AM</td>
-          <td><i class="fa-solid fa-fire"></i>Hot Pilates</td>
-          <td><i class="fa-solid fa-dumbbell"></i>Matt Pilates</td>
-          <td><i class="fa-solid fa-child-reaching"></i>Barre</td>
-          <td><i class="fa-solid fa-bolt"></i>Power Matt</td>
-          <td><i class="fa-solid fa-fire"></i>Hot Pilates</td>
-          <td></td>
+          <td class="clase" data-clase="Hot Pilates" data-hora="6:00 - 7:00 AM LUNES"><i class="fa-solid fa-fire"></i>Hot Pilates</td>
+          <td class="clase" data-clase="Hot Pilates" data-hora="6:00 - 7:00 AM MARTES"><i class="fa-solid fa-dumbbell"></i>Matt Pilates</td>
+          <td class="clase" data-clase="Hot Pilates" data-hora="6:00 - 7:00 AM MIERCOLES"><i class="fa-solid fa-child-reaching"></i>Barre</td>
+          <td class="clase" data-clase="Hot Pilates" data-hora="6:00 - 7:00 AM JUEVES"><i class="fa-solid fa-bolt"></i>Power Matt</td>
+          <td class="clase" data-clase="Hot Pilates" data-hora="6:00 - 7:00 AM VIERNES"><i class="fa-solid fa-fire"></i>Hot Pilates</td>
+          <td>X</td>
           </tr>
 
           <tr>
           <td class="time">7:00 - 8:00 AM</td>
-          <td><i class="fa-solid fa-fire"></i>Hot Pilates</td>
+          <td class="clase" data-clase="Hot Pilates" data-hora="7:00 - 8:00 AM LUNES"><i class="fa-solid fa-fire"></i>Hot Pilates</td>
           <td>XX</td>
           <td>XXX</td>
           <td>XXX</td>
           <td>X</td>
-          <td><i class="fa-solid fa-bolt"></i>Power Matt</td>
+          <td class="clase" data-clase="Power Matt" data-hora="7:00 - 8:00 AM SABADO"><i class="fa-solid fa-bolt"></i>Power Matt</td>
           </tr>
 
           <tr>
           <td class="time">8:00 - 9:00 AM</td>
-          <td><i class="fa-solid fa-dumbbell"></i>Matt Pilates</td>
+          <td class="clase" data-clase="Matt Pilates" data-hora="8:00 - 9:00 AM LUNES"><i class="fa-solid fa-dumbbell"></i>Matt Pilates</td>
           <td>XXX</td>
           <td>XXX</td>
           <td>X</td>
@@ -115,7 +115,7 @@
 
           <tr>
           <td class="time">10:00 - 11:00 AM</td>
-          <td><i class="fa-solid fa-person-praying"></i>Yoga</td>
+          <td class="clase" data-clase="Yoga" data-hora="10:00 - 11:00 AM LUNES"><i class="fa-solid fa-person-praying"></i>Yoga</td>
           <td>XX</td>
           <td>XX</td>
           <td>X</td>
@@ -125,11 +125,11 @@
 
           <tr>
           <td class="time">11:00 - 12:00 PM</td>
-          <td></td>
-          <td></td>
-          <td></td>
-          <td></td>
-          <td></td>
+          <td>X</td>
+          <td>X</td>
+          <td>X</td>
+          <td>X</td>
+          <td>X</td>
           <td>XX</td>
           </tr>
 
@@ -200,6 +200,18 @@
       </div>
 
       <p class="note">* El horario está sujeto a cambios.</p>
+
+      
+      <div class="reserva-box">
+      <div class="indicacion">* Selecciona tus clases dando click en dia y hora en las clases disponibles.</div>
+      
+      <h3>Clases seleccionadas</h3>
+
+      <ul id="lista-clases"></ul>
+
+      <button id="reservarBtn">Solicitar Reserva</button>
+
+      </div>
     </section>
 
     <!-- FOOTER -->
@@ -284,5 +296,73 @@
         <p>© 2026 Fit FLow Club</p>
       </div>
     </footer>
+
+    <script>
+
+const celdas = document.querySelectorAll('.clase');
+const lista = document.getElementById('lista-clases');
+const reservarBtn = document.getElementById('reservarBtn');
+
+let clasesSeleccionadas = [];
+
+
+celdas.forEach(celda => {
+
+celda.addEventListener('click', () => {
+
+const clase = celda.dataset.clase;
+const hora = celda.dataset.hora;
+
+const texto = `${clase} ${hora}`;
+
+if(clasesSeleccionadas.includes(texto)) return;
+
+clasesSeleccionadas.push(texto);
+
+const li = document.createElement('li');
+
+li.innerHTML = `
+${texto}
+<button class="eliminar">❌</button>
+`;
+
+lista.appendChild(li);
+
+
+li.querySelector('.eliminar').addEventListener('click', () => {
+
+clasesSeleccionadas = clasesSeleccionadas.filter(c => c !== texto);
+
+li.remove();
+
+});
+
+});
+
+});
+
+
+reservarBtn.addEventListener('click', () => {
+
+if(clasesSeleccionadas.length === 0){
+alert("Selecciona al menos una clase");
+return;
+}
+
+let mensaje = "Hola, quiero reservar las siguientes clases:%0A%0A";
+
+clasesSeleccionadas.forEach(c => {
+mensaje += "- " + c + "%0A";
+});
+
+const numero = "51959792986";
+
+const url = `https://wa.me/${numero}?text=${mensaje}`;
+
+window.open(url, "_blank");
+
+});
+
+</script>
   </body>
 </html>
